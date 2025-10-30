@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'my_new_project'
+name: 'analytics_downstream_snowflake'
 version: '1.0.0'
 config-version: 2
 
@@ -42,39 +42,9 @@ models:
       +materialized: table
 
 vars:
-  hubspot_schema: dbt_lleon
-  # Marketing
-
-# Core modules
-  hubspot_deal_enabled: false
-  hubspot_company_property_history_enabled: false         # Disables the company property history models
-
-  hubspot_sales_enabled: true                    # You have deal, company, contact
-  hubspot_marketing_enabled: false               # You don't have email_campaign, form
-  hubspot_service_enabled: false                 # You don't have ticket tables
-  
-  # Engagement configuration
-  hubspot_engagement_enabled: true               # You have engagement table
-  hubspot_engagement_deal_enabled: true          # You have engagement_deal
-  hubspot_engagement_company_enabled: true       # You have engagement_company  
-  hubspot_engagement_contact_enabled: true       # You have engagement_contact
-  hubspot_engagement_email_enabled: true         # You have engagement_email
-  hubspot_engagement_note_enabled: true          # You have engagement_note
-  hubspot_engagement_call_enabled: false         # You DON'T have engagement_call
-  hubspot_engagement_meeting_enabled: false      # You DON'T have engagement_meeting
-  hubspot_engagement_task_enabled: false         # You DON'T have engagement_task
-  hubspot_owner_enabled: false
-  hubspot_property_enabled: false                         # Disables property and property_option tables
-  hubspot_role_enabled: false                             # Disables role metadata
-  hubspot_team_enabled: false                             # Disables team metadata
-  hubspot_team_user_enabled: false                        # Disables user-to-team relationships
-
-
-
-  
-  # Other features
-  hubspot_contact_list_enabled: false            # You don't have contact_list
-  hubspot_contact_merge_audit_enabled: false
-  
-  # Pass-through columns (optional)
-  hubspot__pass_through_all_columns: false
+  rag_hubspot_schema: support_data_hubspot
+  rag_hubspot_database: AwsDataCatalog
+  rag_jira_schema: support_data_jira
+  rag_jira_database: AwsDataCatalog
+  rag_zendesk_schema: support_data_zendesk
+  rag_zendesk_database: AwsDataCatalog
