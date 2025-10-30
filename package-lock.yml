@@ -17,7 +17,7 @@ packages:
   - name: fivetran_utils
     package: fivetran/fivetran_utils
     version: 0.4.10
-  - name: hubspot
-    package: fivetran/hubspot
-    version: 1.1.0
-sha1_hash: 066967e6148d610977bcd277d4ab68689931f9da
+  - name: unified_rag
+    package: fivetran/unified_rag
+    version: 0.1.0
+sha1_hash: 8d25530421a3cc8d6a12b447bdccc863e10578a7
